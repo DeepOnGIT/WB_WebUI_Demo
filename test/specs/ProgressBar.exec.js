@@ -22,9 +22,8 @@ describe('Validate Progress page', () => {
         //Logic to click stop when progress reaches 74
         try {
             await ProgressBar.percentageBar.waitUntil(async function () {
-                //waiting until bar value reaches 74 (to click button 1 percent before))
-                //Bar value is dyanamic. May or may not click exactly at 74
-                return (await ProgressBar.percentageBar.getAttribute('aria-valuenow')) === "74" 
+                //waiting until bar value reaches 74 
+                return (await ProgressBar.percentageBar.getAttribute('aria-valuenow')) >= "73" 
                 // if(await this.getText() === '74%'){ return true }
             },
                 {
