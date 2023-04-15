@@ -2,7 +2,7 @@ const { default: AllureReporter } = require('@wdio/allure-reporter')
 const ProgressBar = require('../pageobjects/ProgressBar.POM')
 
 describe('Validate Progress page', () => {
-    it('Verify whether stop button is clicked when bar reaches 75% exact', async () => {
+    it('Verify whether stop button is clicked when bar reaches 75%', async () => {
 
         //Open URL
         await ProgressBar.openURL()
